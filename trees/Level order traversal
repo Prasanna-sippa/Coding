@@ -1,3 +1,10 @@
+Tree Traversals are 2 types:
+1.Breadth First Traversal (Or Level Order Traversal)
+2.Depth First Traversals
+	a.Inorder Traversal (Left-Root-Right)
+	b.Preorder Traversal (Root-Left-Right)
+	c.Postorder Traversal (Left-Right-Root)
+BFS OR LEVEL ORDER TRAVERSAL:
 1.bruteforce Algo: first find the height of the tree and for each level of the tree call a method to traversal, 
 in that method check if level is 1 then print the values if level>1 then call the recursive method for eft and right subtrees
 
