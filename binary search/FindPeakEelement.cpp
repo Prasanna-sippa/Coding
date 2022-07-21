@@ -18,3 +18,10 @@ public:
         return mid;
     }
 };
+
+
+
+
+logic is if left of mid is greater than mid than definetly the ans will lie in left side,
+and if the right of mid greater than mid than ans lies in right side based on that we have to change 
+the mid value and we have to check the edge cases like what if mid is 0 and what if mid is last element so we ahve to return in these cases
