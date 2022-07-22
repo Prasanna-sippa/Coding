@@ -1,22 +1,24 @@
 class Solution {
 public:
-    vector<vector<string>> groupAnagrams(vector<string>& strs) {
-        unordered_map<string,vector<string>> mp;
-        for(string str:strs){
-            string s=str;
-            sort(s.begin(),s.end());
-            if(mp.find(s)!=mp.end()){
-                mp[s].push_back(str);
-            }
-            else{
-                mp[s]=vector<string>();
-                mp[s].push_back(str);
+    int lengthOfLongestSubstring(string s) {
+       unordered_set<char> letters;
+        
+        int i = 0;
+        int j = 0;
+        
+        int result = 0;
+        
+        while (j < s.size()) {
+            if (letters.find(s[j]) == letters.end()) {
+                letters.insert(s[j]);
+                result = max(result, j - i + 1);
+                j++;
+            } else {
+                letters.erase(s[i]);
+                i++;
             }
         }
-        vector<vector<string>> res;
-        for(const auto& [key, value] : mp) {
-            res.push_back(value);
-        }
-        return res;
+        
+        return result;
     }
 };
