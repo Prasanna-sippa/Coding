@@ -8,3 +8,26 @@ Java lambda expression is treated as a function, so compiler does not create .cl
 Functional Interface
 Lambda expression provides implementation of functional interface. An interface which has only one abstract method is called functional interface. Java provides an anotation @FunctionalInterface, which is used to declare an interface as functional interface.
 
+difference between ArrayList, LinkedList and Vector:
+vector and arraylist require space as more elements are added. vector each time doubles its array size, while arraylist grow 50% of its size each time. linkedlist, however, also implements queue interface which adds more methods than arraylist and vector, such as offer(), peek(), poll(), etc.
+
+When to use GroupBy, orderBy and having clause:
+Having Clause is basically like the aggregate function with the GROUP BY clause. The HAVING clause is used instead of WHERE with aggregate functions. While the GROUP BY Clause groups rows that have the same values into summary rows. The having clause is used with the where clause in order to find rows with certain conditions. The having clause is always used after the group By clause.  
+
+The ORDER BY statement in SQL is used to sort the fetched data in either ascending or descending according to one or more columns. 
+
+By default ORDER BY sorts the data in ascending order.
+We can use the keyword DESC to sort the data in descending order and the keyword ASC to sort in ascending order.
+
+
+What is synchronization, what is thread safe:
+Synchronized: only one thread can operate at same time. Threadsafe: a method or class instance can be used by multiple threads at the same time without any problems occurring.
+
+whats is oop and their features
+implementation of basic dataStructure
+functional interface in java
+why strings are immutable in java:
+The String is immutable in Java because of the security, synchronization and concurrency, caching, and class loading. The reason of making string final is to destroy the immutability and to not allow others to extend it.
+The String objects are cached in the String pool, and it makes the String immutable.
+
+preparedStatement and CallStatement in java jdbc connection
