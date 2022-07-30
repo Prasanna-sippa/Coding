@@ -14,3 +14,8 @@ GOOGLE'S FAVORITE TOPICS:
 9.Binary heaps
 10.Ad hoc/string manipulations.
 11.Dp
+12.Graph
+13.Dynamic Programming
+14.Priority Queue
+15.Operating System
+16.OOPs Concepts
