@@ -19,3 +19,8 @@ public:
         return image;
     }
 };
+
+Time Complexity: O(N), where N is the number of pixels in the image. We might process every pixel.
+
+Space Complexity: O(N), the size of the implicit call stack when calling dfs.
+
