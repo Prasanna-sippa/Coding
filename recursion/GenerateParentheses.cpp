@@ -46,3 +46,8 @@ class Solution
         
     }
 };
+
+
+
+Expected Time Complexity: O(2N * N).
+Expected Auxiliary Space: O(2*N*X), X = Number of valid Parenthesis.
