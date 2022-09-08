@@ -82,3 +82,19 @@ vector<int> find(int arr[], int N , int K)
     //   return res;
     return {first,last};
 }
+
+
+using STL C++
+    
+    
+vector<int> find(int arr[], int N , int K)
+{
+    if(!binary_search(arr,arr+N,K)){
+        return {-1,-1};
+    }
+    int first=-1,last=-1;
+     first=lower_bound(arr,arr+N,K)-arr;
+     last=upper_bound(arr,arr+N,K)-arr-1;
+    
+    return {first,last};
+}   
