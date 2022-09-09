@@ -1,3 +1,49 @@
+lower bound cpp :  means >=
+it will return pointer to greater than or equal to the given number
+int lower_bound(vector<int> nums, int target){
+        int l = 0, r = nums.size()-1, m = 0;
+        while(l < r) {
+            m = (l+r)/2;
+            if(nums[m] < target)
+                l = m+1;
+            else 
+                r = m;
+        }
+        return r;
+    }
+Input: 10 20 30 40 50
+Output: lower_bound for element 30 at index 2
+
+Input: 10 20 30 40 50
+Output: lower_bound for element 35 at index 3
+
+Input: 10 20 30 40 50
+Output: lower_bound for element 55 at index 5 (Basically, 55 is not present, so it returns end() iterator)
+
+Input: 10 20 30 30 30 40 50
+Output: lower_bound for element 30 at index 2
+   
+
+upper bound: means >
+It returns an iterator pointing to the first element in the range [first, last) that is greater than value
+. The elements in the range shall already be sorted or at least partitioned with respect to val.
+ int upper_bound(vector<int> nums, int target){
+        int l = 0, r = nums.size()-1, m = 0;
+        while(l < r) {
+            m = (l+r)/2;
+            if(nums[m] <= target)
+                l = m+1;
+            else 
+                r = m;
+        }
+        return r;
+    }
+ The set elements are: 1 2 4 5 6 
+The upper bound of key 2 is 4
+The upper bound of key 3 is 4
+
+
+
 patterns:
 1.maximize/minimize particular value
 2.given some conditions find the value
