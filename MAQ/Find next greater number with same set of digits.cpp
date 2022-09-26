@@ -147,3 +147,28 @@ int main()
 
 Time Complexity: O(N)
 Auxiliary Space: O(1)
+
+	
+###gfg soln
+	class Solution
+{
+    public:
+    int findNext (int N) 
+    {
+        if(N == 1) return -1;
+        string num = to_string(N);
+        int i, j;
+        for(i = num.length()-1; i > 0; i--){
+            if(num[i] > num[i-1]) break;
+        }
+        if(i == 0) return -1;
+        for(j = num.length()-1; j >= i; j--){
+            if(num[i-1] < num[j]) {
+                swap(num[i-1], num[j]);
+                break;
+            }
+        }
+        reverse(num.begin()+i, num.end());
+        return stoi(num);
+    }  
+};
